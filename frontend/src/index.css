@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900 antialiased;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 text-sm rounded-md
+           border transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary { @apply bg-brand-500 text-white border-brand-500 hover:bg-brand-600; }
+  .btn-secondary { @apply bg-white text-slate-700 border-slate-300 hover:bg-slate-50; }
+  .btn-ghost { @apply text-slate-600 border-transparent hover:bg-slate-100; }
+  .btn-success { @apply bg-emerald-500 text-white border-emerald-500 hover:bg-emerald-600; }
+  .btn-danger { @apply bg-white text-rose-600 border-rose-200 hover:bg-rose-50; }
+  .btn-purple { @apply bg-gradient-to-r from-purple-500 to-blue-500 text-white border-transparent hover:opacity-90; }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-medium rounded-full;
+  }
+  .badge-pending { @apply bg-amber-50 text-amber-700; }
+  .badge-accept { @apply bg-emerald-50 text-emerald-700; }
+  .badge-reject { @apply bg-rose-50 text-rose-700; }
+  .badge-failed { @apply bg-orange-50 text-orange-700; }
+  .badge-rule { @apply bg-violet-50 text-violet-700; }
+
+  .layer-tag { @apply text-[10px] font-semibold px-1.5 py-0.5 rounded; }
+  .layer-L1 { @apply bg-amber-100 text-amber-700; }
+  .layer-L2 { @apply bg-sky-100 text-sky-700; }
+  .layer-L3 { @apply bg-purple-100 text-purple-700; }
+  .layer-L4 { @apply bg-pink-100 text-pink-700; }
+  .layer-L5 { @apply bg-orange-100 text-orange-700; }
+  .layer-chat { @apply bg-violet-100 text-violet-700; }
+  .layer-user { @apply bg-gradient-to-r from-violet-100 to-pink-100 text-violet-700; }
+
+  .conf-high { @apply bg-emerald-100 text-emerald-700; }
+  .conf-medium { @apply bg-amber-100 text-amber-700; }
+  .conf-low { @apply bg-rose-100 text-rose-700; }
+}
+
+.doc-preview { @apply bg-white p-12 max-w-3xl mx-auto shadow-md rounded font-serif text-base leading-loose text-slate-800; }
+.doc-preview h1, .doc-preview h2 { @apply text-xl font-semibold my-4 text-slate-900; }
+.doc-preview p { @apply my-2; }
+.doc-preview p.hl { @apply bg-amber-50 -mx-2 px-2 rounded transition-colors duration-500; }
+.doc-preview .ins { @apply text-rose-700 underline bg-rose-50 px-0.5 rounded-sm; }
+.doc-preview .del { @apply text-slate-400 line-through bg-slate-50 px-0.5 rounded-sm; }

@@ -1,0 +1,83 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== 前端 =====
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.next/
+frontend/tsconfig*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ===== 本地数据 / 密钥(绝对不能上传) =====
+backend/data/
+backend/.env
+.env
+.env.local
+.env.*.local
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# 历史会话残留(老版本)
+sessions/
+data/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== macOS / Windows / Linux =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===== 日志 / 临时 =====
+*.log
+logs/
+tmp/
+.cache/
+
+# ===== 用户上传的 docx(测试 fixtures 例外,显式排除) =====
+backend/data/uploads/
+backend/data/work/
+
+# ===== 设计文档不公开 =====
+docs/
+
+# ===== Claude Code 内部文件 =====
+.claude/
+/CLAUDE.md
