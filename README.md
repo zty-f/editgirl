@@ -61,13 +61,19 @@
 
 ## 🚀 快速开始
 
+### AI用户极速版指令
+```text
+把下面这句话丢给你的智能体，OpenClaw、Trae、ClaudeCode、Cursor都可以
+指令：请帮我在本地部署这个项目，git地址：https://github.com/zty-f/editgirl 部署完成后直接打开就行。
+```
+
 ### 前置要求
 
 - Python 3.11+
 - Node.js 22+ / npm 10+
 - 一个 LLM 服务(OpenAI / Anthropic / DeepSeek 任一即可)
 
-### 安装
+### 正常安装使用指令
 
 ```bash
 # 1. 克隆
