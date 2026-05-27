@@ -97,7 +97,7 @@ cp backend/.env.example backend/.env
 ### 运行
 
 ```bash
-./start.sh
+./start.sh        # 一键启前后端(自动清旧进程)
 ```
 
 打开 http://localhost:5173,开始用。
@@ -105,7 +105,13 @@ cp backend/.env.example backend/.env
 - 前端 UI:http://localhost:5173
 - 后端 API + 自动文档:http://localhost:8000/docs
 
-`Ctrl+C` 一起关。改后端代码需重启;改前端代码 Vite HMR 自动应用。
+### 停止
+
+```bash
+./stop.sh         # 干净停所有(8000 + 5173 端口)
+```
+
+或在 `start.sh` 运行的终端按 `Ctrl+C` 也行。改后端代码需重启;改前端代码 Vite HMR 自动应用。
 
 #### [测试文档.docx](backend/tests/fixtures/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3.docx)
 
@@ -127,7 +133,8 @@ editgirl/
 │       ├── pages/                 # Home / Doc / Skills
 │       ├── components/            # 复用组件
 │       └── lib/api.ts             # API client + 类型
-├── start.sh                       # 一键启停
+├── start.sh                       # 一键启动前后端
+├── stop.sh                        # 一键停止
 ├── README.md
 └── LICENSE
 ```
